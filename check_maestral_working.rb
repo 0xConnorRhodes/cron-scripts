@@ -1,7 +1,9 @@
+require 'active_support/time'
+
 def write_log(message)
   log_path = '/home/cron/logs/check_maestral_working.log'
   puts message
-  timestamp = Time.now.strftime("%y%m%d-%I%M%p")
+  timestamp = Time.now.in_time_zone('Central Time (US & Canada)').strftime("%y%m%d-%I%M%p")
   log_message = "#{timestamp}: #{message}\n"
   File.open(log_path, 'a') {|f| f.write log_message}
 end
