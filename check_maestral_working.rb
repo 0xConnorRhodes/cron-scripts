@@ -1,5 +1,5 @@
 def write_log(message)
-  log_path = '/home/cron/.local/share/cron_logs/check_maestral_working.log'
+  log_path = '/home/cron/logs/check_maestral_working.log'
   puts message
   log_message = "#{Time.now.to_i}: #{message}\n"
   File.open(log_path, 'a') {|f| f.write log_message}
