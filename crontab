@@ -1,4 +1,4 @@
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/home/cron/.local/bin
 
-*/10 * * * * /usr/bin/ruby /home/cron/code/cron-scripts/check_maestral_working.rb > /home/cron/output.txt
+*/10 * * * * /usr/bin/ruby /home/cron/code/cron-scripts/check_maestral_working.rb
