@@ -1,7 +1,8 @@
 def write_log(message)
   log_path = '/home/cron/logs/check_maestral_working.log'
   puts message
-  log_message = "#{Time.now.to_i}: #{message}\n"
+  timestamp = Time.now.strftime("%y%m%d-%I%M%p")
+  log_message = "#{timestamp}: #{message}\n"
   File.open(log_path, 'a') {|f| f.write log_message}
 end
 
