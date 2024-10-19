@@ -1,0 +1,1 @@
+*/10 * * * * ruby /home/cron/code/cron-scripts/check_maestral_working.rb
