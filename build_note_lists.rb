@@ -16,7 +16,7 @@ end
 
 def build_list_from_filename(glob_pattern, output_file)
   file_list = Dir.glob("#{NOTES_FOLDER}/#{glob_pattern}")
-  file_list.map! {|i| i[NOTES_FOLDER.length+3..-4]}
+  file_list.map! {|i| i[(NOTES_FOLDER.length + glob_pattern.length)..-4]}
   file_list.append('NEW')
 
   File.open(File.join(NOTES_FOLDER, output_file), 'w') do |f|
