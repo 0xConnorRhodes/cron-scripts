@@ -5,3 +5,4 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/home/cron/.local/bin
 0 3 * * * /home/cron/code/cron-scripts/create_daily_note.py
 0 3 * * * /usr/bin/ruby /home/cron/code/cron-scripts/bump_index_daily_note_link.rb
 0 3 * * * /usr/bin/ruby /home/cron/code/cron-scripts/build_note_lists.rb
+0 4 * * * /usr/bin/ruby /home/cron/code/notes-scripts/cron/load_todays_tasks.rb
