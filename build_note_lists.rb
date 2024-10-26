@@ -24,3 +24,4 @@ end
 
 build_list_from_tag('#vaccounts', '.vaccounts.list')
 build_list_from_filename('r_*', '.rdex.list')
+build_list_from_filename('c_*', '.circles.list')
