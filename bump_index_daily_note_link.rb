@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'date'
 
 file_path = File.join(File.expand_path('~'), 'notes', 'index.md')

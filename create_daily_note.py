@@ -1,10 +1,11 @@
-#!/home/cron/code/cron-scripts/.pyenv/bin/python3
+#!/usr/bin/env python3
 
 from datetime import datetime, timedelta
 from jinja2 import Environment, FileSystemLoader
 import os
 
-notes_dir = f"{os.environ.get('HOME')}/notes"
+home_dir = os.path.expanduser("~")
+notes_dir = f"{home_dir}/notes"
 
 def render_note_content(date_str):
     return template.render(
@@ -18,7 +19,7 @@ def get_note_filepath(date_str):
 
 # Determine path to script, set and load template
 base_dir = os.path.dirname(os.path.abspath(__file__))
-template_dir = "/home/cron/code/notes-templates"
+template_dir = f"{home_dir}/code/notes-templates"
 env = Environment(loader=FileSystemLoader(template_dir))
 template = env.get_template('daily_note-template.md.j2')
 

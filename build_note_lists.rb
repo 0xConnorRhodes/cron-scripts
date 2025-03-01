@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 NOTES_FOLDER = File.join(File.expand_path('~'), 'notes')
 
 def build_list_from_tag (tag_query, output_file)
